@@ -12,3 +12,6 @@ This repository contains personalized customizations added to my `.bashrc` files
 3. You're good to go! Enjoy the customized Linux terminal experience.
 
 Feel free to explore and adapt the configurations to suit your preferences.
+
+
+More coming ...
