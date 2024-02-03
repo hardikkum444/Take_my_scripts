@@ -1,3 +1,5 @@
+# This scrpt will allow you to extract the following file formats using only one command (i.e extract filename)
+
 function extract() {
     if [ -f "$1" ]; then
         case "$1" in
