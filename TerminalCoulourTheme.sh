@@ -26,4 +26,6 @@ echo -e "\033]10;#00FFFF\007"
 
 # Add a new line for the next prompt
 PS1+=' \n\$ '
-#PS1+='\u@\h:\w\n\$ '
+
+# Or if you just want a space not a new line
+PS1+=' \$ '
