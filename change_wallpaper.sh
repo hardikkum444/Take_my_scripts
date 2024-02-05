@@ -65,3 +65,33 @@ gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPERS_DIR/$
 
 # [Service]
 # ExecStart=/home/man44/custom/change_wallpaper.sh %i
+
+
+
+#--------------------------------------------------------------------------------------------------
+BATTERY RULE saved in /etc/udev/rules.d
+
+
+## Rule for when switching to battery
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="0", ENV{DISPLAY}=":0", RUN+="/usr/bin/su man44 -c /usr/local/bin/normal.sh"
+
+# Rule for when switching to AC
+ACTION=="change", SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ATTR{online}=="1", ENV{DISPLAY}=":0", RUN+="/usr/bin/su man44 -c /usr/local/bin/wallpaper.sh"
+
+# ---------------------------------------------------------------------------------------------------
+WALLPAPER SCRIPT saved in /usr/local/bin
+
+#!/bin/bash
+
+export DISPLAY=:0
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
+# Path to your wallpapers directory
+WALLPAPERS_DIR="/home/man44/Documents/charge"
+
+# Select a random wallpaper from the directory
+WALLPAPER=$(ls "$WALLPAPERS_DIR" | shuf -n 1)
+
+# Set the selected wallpaper using gsettings
+gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPERS_DIR/$WALLPAPER"
