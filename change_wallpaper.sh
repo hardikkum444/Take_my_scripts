@@ -60,3 +60,8 @@ gsettings set org.gnome.desktop.background picture-uri "file://$WALLPAPERS_DIR/$
     # ATTR{voltage_min_design}=="11520000"
     # ATTR{voltage_now}=="12964000"
 
+# [Unit]
+# Description=Battery Service
+
+# [Service]
+# ExecStart=/home/man44/custom/change_wallpaper.sh %i
