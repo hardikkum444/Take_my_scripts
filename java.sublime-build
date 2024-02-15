@@ -1,0 +1,16 @@
+{
+    "cmd": ["javac", "$file_name", "&&", "java", "$file_base_name"],
+    "shell": true,
+    "selector": "source.java",
+    "working_dir": "${file_path}",
+    "path": "/usr/bin:/usr/local/bin" // Adjust the path if necessary
+}
+
+or 
+
+{
+    "shell_cmd": "javac \"$file_name\" && java \"$file_base_name\"",
+    "selector": "source.java",
+    "working_dir": "${file_path}",
+    "path": "/usr/bin:/usr/local/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin" // Adjust the path if necessary
+}
