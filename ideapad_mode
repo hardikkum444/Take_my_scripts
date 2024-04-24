@@ -1,0 +1,18 @@
+# cat /proc/acpi/call; printf '\n'
+
+
+#!/bin/bash
+
+echo '\_SB.PCI0.LPC0.EC0.GZ44' > /proc/acpi/call
+mode=$(cat /proc/acpi/call)
+printf '\n'
+
+if [ "$mode" == "0x0" ]; then
+    echo "Intelligent Cooling"
+elif [ "$mode" == "0x1" ]; then
+    echo "Extreme Performance"
+elif [ "$mode" == "0x2" ]; then
+    echo "Battery Saving"
+else
+    echo "Unknown mode: $mode"
+fi
