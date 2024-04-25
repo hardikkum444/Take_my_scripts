@@ -4,15 +4,15 @@
 #!/bin/bash
 
 echo '\_SB.PCI0.LPC0.EC0.GZ44' > /proc/acpi/call
-mode=$(cat /proc/acpi/call)
+mode=$(cat /proc/acpi/call | tr -d '\0')
 printf '\n'
 
 if [ "$mode" == "0x0" ]; then
-    echo "Intelligent Cooling"
+    echo -e "Mode: \e[48;5;27m\e[97mIntelligent Cooling\e[0m"
 elif [ "$mode" == "0x1" ]; then
-    echo "Extreme Performance"
+    echo -e "Mode: \e[48;5;196m\e[97mExtreme Performance\e[0m"
 elif [ "$mode" == "0x2" ]; then
-    echo "Battery Saving"
+    echo -e "Mode: \e[48;5;97m\e[97mBattery Saving\e[0m"
 else
     echo "Unknown mode: $mode"
 fi
