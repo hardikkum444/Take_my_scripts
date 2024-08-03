@@ -1,17 +1,17 @@
-## MyCustomLinux
+## Take-My-Scripts
 
-This repository contains personalized customizations added to my `.bashrc` files for enhanced usability.
+This repository contains personalized scripts which can be used by anyone to make life easier
 
 ## Usage
 
-1. Copy and paste the provided code into your `.bashrc` file.
-2. Run the following command to apply the changes:
+1. Download, pull or copy-paste the code in a file.
+2. Run the file according to the programming language
     ```bash
     source ~/.bashrc
     ```
-3. You're good to go! Enjoy the customized Linux terminal experience.
+3. duh
 
-Feel free to explore and adapt the configurations to suit your preferences.
+Feel free to explore and suggest changes or modifications
 
 
 More coming ...
