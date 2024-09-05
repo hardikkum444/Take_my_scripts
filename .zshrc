@@ -105,7 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="nvim"
-
+alias py="python3"
+alias ls="eza"
 
 # This part of the config has been taken from shaka's github
 # https://github.com/shakakibara12/dotfiles/blob/master/zsh/.zshrc
