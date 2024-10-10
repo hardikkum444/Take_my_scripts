@@ -17,7 +17,6 @@
     "dark": "Github Dark"
   },
   "autosave": "on_focus_change",
-  "base_keymap": "VSCode",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "format_on_save": "on",
   "buffer_font_fallbacks": ["Nerd Font"],
