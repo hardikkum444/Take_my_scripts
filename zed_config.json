@@ -1,4 +1,4 @@
-ze// Zed settings
+// Zed settings
 //
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
@@ -17,6 +17,18 @@ ze// Zed settings
     "dark": "Github Dark"
   },
   "autosave": "on_focus_change",
+  "base_keymap": "VSCode",
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "format_on_save": "on"
+  "format_on_save": "on",
+  "buffer_font_fallbacks": ["Nerd Font"],
+  "buffer_font_weight": 300,
+  "buffer_line_height": "comfortable",
+  "cursor_blink": false,
+  "terminal": {
+    "blinking": "off",
+    "font_family": "JetBrainsMono Nerd Font",
+    "line_height": "standard"
+  },
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_weight": 300
 }
